@@ -1,7 +1,7 @@
 # Website Portofolio Pribadi
 
 ## Deskripsi
-Website portofolio pribadi yang menampilkan profil, keahlian, dan proyek-proyek yang telah saya kerjakan.
+Website portofolio pribadi yang menampilkan profil, keahlian, dan proyek-proy\nnek yang telah saya kerjan.
 
 ## Teknologi yang Digunakan
 - HTML5
