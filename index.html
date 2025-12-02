@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio pribadi Ari Afrizal - Menampilkan keahlian, pengalaman, dan proyek profesional">
+    <title>Portfolio Ari Afrizal - Mahasiswa UNIM BONE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header: Bagian atas halaman berisi identitas -->
+    <header>
+        <div class="header-content">
+            <h1>Ari Afrizal</h1>
+            <p>Mahasiswa UNIM BONE | Teknologi Pendidikan</p>
+        </div>
+    </header>
+
+    <!-- Navigation: Menu navigasi utama website -->
+    <nav>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+            ☰
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#tentang">Tentang Saya</a></li>
+            <li><a href="#keahlian">Keahlian</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- TOMBOL INTERAKTIF -->
+    <div class="btn-container">
+        <button class="btn" onclick="ubahTema()">🌓 Ubah Tema</button>
+        <button class="btn btn-sapa" onclick="sapaPengunjung()">👋 Sapa Saya</button>
+    </div>
+
+    <!-- Elemen untuk menampilkan sapaan -->
+    <div id="greeting"></div>
+
+    <!-- Main: Konten utama halaman -->
+    <main class="container">
+        <!-- Aside: Konten sampingan - Media sosial -->
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-image">
+                    <span class="profile-initial">AA</span>
+                </div>
+                <h2>Terhubung dengan Saya</h2>
+                <ul class="social-links">
+                    <li>
+                        <a href="https://instagram.com/ari.afrizal.02" target="_blank" rel="noopener">
+                            📱 Instagram
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://facebook.com/jess" target="_blank" rel="noopener">
+                            👥 Facebook
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Content Wrapper: Konten utama -->
+        <div class="content-wrapper">
+            <!-- Section 1: Tentang Saya -->
+            <section id="tentang" class="section">
+                <h2>Tentang Saya</h2>
+                <p>
+                    Halo! Saya adalah seorang mahasiswa dari <span class="highlight-text">UNIVERSITAS MUHAMMADIYAH BONE</span>,
+                    saya sekarang berada di Semester 5 pada PRODI Teknologi Pendidikan.
+                </p>
+                <p>
+                    Saya memiliki passion dalam bidang teknologi pendidikan dan desain grafis. Saya selalu bersemangat 
+                    untuk mempelajari hal-hal baru dan mengembangkan keterampilan yang saya miliki.
+                </p>
+            </section>
+
+            <!-- Section 2: Keahlian -->
+            <section id="keahlian" class="section">
+                <h2>Keahlian</h2>
+                
+                <div class="keahlian-grid">
+                    <!-- Article: Keahlian AutoCAD -->
+                    <article class="skill-card">
+                        <div class="skill-icon">📐</div>
+                        <h3>AutoCAD Drafting</h3>
+                        <p>
+                            Berpengalaman dalam membuat draft/gambar teknik dengan standar profesional.
+                            Mampu mendesain layout 2D dan modeling 3D untuk berbagai keperluan.
+                        </p>
+                        <p><strong>Tools:</strong> AutoCAD, SketchUp</p>
+                    </article>
+
+                    <!-- Article: Keahlian Microsoft Word -->
+                    <article class="skill-card">
+                        <div class="skill-icon">📝</div>
+                        <h3>Microsoft Word Proficiency</h3>
+                        <p>
+                            Berpengalaman dalam menggunakan Microsoft Word untuk membuat, mengedit, memformat,
+                            dan mengelola dokumen secara efektif dan efisien.
+                        </p>
+                        <p><strong>Tools:</strong> Microsoft Word, Google Docs</p>
+                    </article>
+
+                    <!-- Article: Keahlian Tambahan -->
+                    <article class="skill-card">
+                        <div class="skill-icon">🎓</div>
+                        <h3>Teknologi Pendidikan</h3>
+                        <p>
+                            Memahami konsep dan implementasi teknologi dalam dunia pendidikan.
+                            Mampu merancang media pembelajaran yang interaktif dan efektif.
+                        </p>
+                        <p><strong>Fokus:</strong> E-Learning, Media Pembelajaran</p>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer: Bagian bawah halaman dengan informasi kontak -->
+    <footer id="kontak">
+        <div class="footer-content">
+            <h2>Kontak</h2>
+            <div class="footer-contact">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <p>Email: <a href="mailto:ichalbone001@gmail.com">ichalbone001@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📞</span>
+                    <p>Telepon: <a href="tel:+6285243452806">+62 852-4345-2806</a></p>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <p class="copyright">&copy; 2025 Ari Afrizal. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT JAVASCRIPT -->
+    <script>
+        // Fungsi untuk toggle menu mobile
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        menuToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Tutup menu saat link diklik
+        const navLinks = document.querySelectorAll('.nav-menu a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.classList.remove('active');
+            });
+        });
+
+        // Fungsi ubah tema
+        function ubahTema() {
+            document.body.classList.toggle('dark-theme');
+            const isDark = document.body.classList.contains('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        }
+
+        // Load tema dari localStorage
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+            }
+        });
+
+        // Fungsi sapa pengunjung
+        function sapaPengunjung() {
+            const greetingDiv = document.getElementById('greeting');
+            const now = new Date();
+            const hour = now.getHours();
+            let salam;
+
+            if (hour < 11) {
+                salam = "Selamat Pagi";
+            } else if (hour < 15) {
+                salam = "Selamat Siang";
+            } else if (hour < 18) {
+                salam = "Selamat Sore";
+            } else {
+                salam = "Selamat Malam";
+            }
+
+            greetingDiv.textContent = `${salam}! Terima kasih telah mengunjungi portfolio saya 😊`;
+            greetingDiv.style.display = 'block';
+
+            setTimeout(() => {
+                greetingDiv.style.display = 'none';
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
