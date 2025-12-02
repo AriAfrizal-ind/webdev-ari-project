@@ -24,4 +24,4 @@ Website portofolio pribadi yang menampilkan profil, keahlian, dan proyek-proy\nn
 - Email: ichalbone001@gmail.com
 
 ## Lisensi
-© 2024 - Nama Anda
+© 2025 - Ari Afrizal
